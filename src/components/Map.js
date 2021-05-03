@@ -284,10 +284,11 @@ class Map extends React.Component {
             }}
             onChange={this.onAutocompleteChange}
             onPlaceSelected={this.onPlaceSelected}
-            // options={{
-
-            // }}
-            types={['(regions)']}
+            options={{
+              types: ['(regions)'],
+              componentRestrictions: { country: 'vn' },
+            }}
+            // types={['(regions)']}
           />
         </GoogleMap>
       ))
@@ -349,7 +350,8 @@ class Map extends React.Component {
           </div>
 
           <AsyncMap
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDGe5vjL8wBmilLzoJ0jNIwe9SAuH2xS_0&libraries=places`}
+            // googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDGe5vjL8wBmilLzoJ0jNIwe9SAuH2xS_0&libraries=places`}
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places`}
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: this.props.height }} />}
             mapElement={<div style={{ height: `100%` }} />}
