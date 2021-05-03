@@ -274,7 +274,6 @@ class Map extends React.Component {
           <Marker />
 
           <Autocomplete
-            // apiKey={API_KEY}
             style={{
               width: '100%',
               height: '40px',
@@ -285,7 +284,8 @@ class Map extends React.Component {
             onChange={this.onAutocompleteChange}
             onPlaceSelected={this.onPlaceSelected}
             options={{
-              types: ['(regions)'],
+              // types: ['(cities)'],
+              types: ['geocode', 'establishment'],
               componentRestrictions: { country: 'vn' },
             }}
             // types={['(regions)']}
