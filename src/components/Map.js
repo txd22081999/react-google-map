@@ -246,9 +246,6 @@ class Map extends React.Component {
             lat: this.state.mapPosition.lat,
             lng: this.state.mapPosition.lng,
           }}
-          // center={{
-
-          // }}
         >
           <InfoWindow
             onClose={this.onInfoWindowClose}
@@ -352,8 +349,7 @@ class Map extends React.Component {
           </div>
 
           <AsyncMap
-            // googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDGe5vjL8wBmilLzoJ0jNIwe9SAuH2xS_0&libraries=places`}
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places`}
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDGe5vjL8wBmilLzoJ0jNIwe9SAuH2xS_0&libraries=places`}
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: this.props.height }} />}
             mapElement={<div style={{ height: `100%` }} />}
