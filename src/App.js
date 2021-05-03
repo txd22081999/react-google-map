@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Map from './components/Map'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <div style={{ margin: 20 }}>
+          <Map
+            google={this.props.google}
+            // center={{ lat: 18.5204, lng: 73.8567 }}
+            // 10.7634029,106.6810705
+            center={{ lat: 10.7634029, lng: 106.6810705 }}
+            height='600px'
+            zoom={15}
+          />
+        </div>
+      </>
+    )
+  }
 }
 
-export default App;
+export default App
